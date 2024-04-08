@@ -16,10 +16,10 @@
 #X obj 548 454 biquad~ 0 0 1 0 0;
 #X obj 656 494 biquad~ 0 0 1 0 0;
 #X obj 764 534 biquad~ 0 0 1 0 0;
-#X text 107 58 In the format: <itd> <iir_coeffs_left> <iir_coeffs_right>, f 49;
-#X msg 107 111 0 0.5464 -0.85287 0.31884 -1.2673 0.50382 -1.9522 0.9589 -1.9329 0.94061 -0.88747 0.77594 0.12334 0.46771 0.39241 0.82353 -0.17627 0.57129 -1.98 0.98055 -1.9819 0.98243 -1.9452 0.9891 -1.9433 0.98716 0.5464 -0.85287 0.31884 -1.2673 0.50382 -1.9522 0.9589 -1.9329 0.94061 -0.88747 0.77594 0.12334 0.46771 0.39241 0.82353 -0.17627 0.57129 -1.98 0.98055 -1.9819 0.98243 -1.9452 0.9891 -1.9433 0.98716, f 93;
-#X text 107 18 Parameters for a given azimuth and elevation \, from "https://github.com/Ircam-RnD/binauralModeled/blob/gh-pages/examples/snd/complete_hrtf_modeled.js#L5167", f 93;
-#X obj 107 84 loadbang;
+#X text 107 48 Parameters for a given azimuth and elevation \, from "https://github.com/Ircam-RnD/binauralModeled/blob/gh-pages/examples/snd/complete_hrtf_modeled.js#L5167", f 93;
+#X obj 107 114 loadbang;
+#X text 107 88 In the format: b1_n b2_n -a1_n -a2_n b1_n+1 b2_n+1 -a1_n+1 -a2_n+2 ..., f 62;
+#X msg 107 141 0.5464 -0.85287 0.31884 -1.2673 0.50382 -1.9522 0.9589 -1.9329 0.94061 -0.88747 0.77594 0.12334 0.46771 0.39241 0.82353 -0.17627 0.57129 -1.98 0.98055 -1.9819 0.98243 -1.9452 0.9891 -1.9433 0.98716, f 93;
 #X connect 0 0 1 0;
 #X connect 0 1 5 0;
 #X connect 1 0 2 1;
@@ -43,5 +43,5 @@
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 4 0;
-#X connect 18 0 0 0;
-#X connect 20 0 18 0;
+#X connect 18 0 20 0;
+#X connect 20 0 0 0;
