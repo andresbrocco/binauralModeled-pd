@@ -9,12 +9,12 @@
 #X obj 42 156 readsf~ 1 1e+06;
 #X text 313 33 The "binauralModeled-ircam" object is a pure-vanilla implementation of the binaural model created by IRCAM: https://github.com/Ircam-RnD/binauralModeled/tree/gh-pages;
 #X text 313 89 Basically \, it applies ITD and approximates the HRTF to a series of biquad filters \, whose coefficients are avaliable at: https://github.com/Ircam-RnD/binauralModeled/blob/gh-pages/examples/snd/complete_hrtf_modeled.js;
-#X text 313 328 You can control the Azimuth and Elevation through the interface \, or pass them as argument to the first inlet.;
 #X text 313 189 There is no interpolation in space (between datapoints): the chosen set of coefficients for the HRTF is the closest datapoint to the given azimuth and elevation (by euclidean distance).;
 #X text 313 249 There is interpolation in time (so that a moving source sound smooth): two binauralModels run concurrently \, and the transition is made by alternating which one to use (previous/current). That transition occurs in 20ms \, whenever a new location is received.;
+#X text 313 328 You can control the Azimuth and Elevation through the interface \, or pass them as argument to the first inlet.;
+#X text 313 370 Obs.: If the Azimuth and elevation does not match exactly the coordinates of a point in the dataset of HRTFs \, the object will perform a search by distance \, which is not optimal. Therefore \, if this object is embedded in a higher level application and you are concerned about performance \, you should implement a k-d tree search in order to find the exact datapoint before passing it to the "binauralModeled-ircam" object.;
 #X text 313 489 It makes more sense to spatialize a mono audio signal (connect audio to both inputs) \, but you can also treat the input as stereo \, if you wish.;
 #X text 313 160 Sample Rate: those coefficients work for audio at 44100Hz only!;
-#X text 313 370 Obs.: If the Azimuth and elevation does not match exactly the coordinates of a point in the dataset of HRTFs \, the object will perform a search by distance \, which is not optimal. Therefore \, if this object is embedded in a higher level application and you are concerned about performance \, you should implement a k-d tree search in order to find the exact datapoint before passing it to the "binauralModeled-ircam" object.;
 #X connect 0 0 7 0;
 #X connect 1 0 5 0;
 #X connect 2 0 0 0;
