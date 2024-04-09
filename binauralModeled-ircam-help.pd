@@ -15,7 +15,7 @@
 #X text 313 489 It makes more sense to spatialize a mono audio signal (connect audio to both inputs) \, but you can also treat the input as stereo \, if you wish.;
 #X text 313 160 Sample Rate: those coefficients work for audio at 44100Hz only!;
 #X obj 42 524 dac~, f 11;
-#X obj 183 408 vsl 14 67 0 1 0 1 empty empty empty 0 -9 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
+#X obj 65 408 vsl 14 67 0 1 0 1 empty empty empty 0 -9 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
 #X obj 96 490 *~ 0;
 #X obj 42 490 *~ 0;
 #X connect 0 0 6 0;

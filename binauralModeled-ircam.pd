@@ -62,8 +62,9 @@
 #X obj 91 223 outlet~;
 #X obj 206 223 outlet~;
 #X obj 268 223 outlet~;
-#X obj 51 127 !-~ 1;
 #X obj 349 23 inlet~;
+#X obj 53 98 *~ -1;
+#X obj 53 135 +~ 1;
 #X connect 0 0 10 0;
 #X connect 1 0 8 0;
 #X connect 2 0 11 0;
@@ -72,11 +73,12 @@
 #X connect 5 0 3 0;
 #X connect 6 0 0 0;
 #X connect 7 0 2 0;
-#X connect 12 0 1 1;
-#X connect 12 0 3 1;
-#X connect 13 0 12 0;
-#X connect 13 0 0 1;
-#X connect 13 0 2 1;
+#X connect 12 0 0 1;
+#X connect 12 0 2 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 1;
+#X connect 14 0 3 1;
 #X restore 298 638 pd crossfader;
 #X f 15;
 #X floatatom 383 349 8 0 0 2 azimuth - - 16;
